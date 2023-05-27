@@ -1,0 +1,674 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+span{
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+.first-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    background-image: url("./images/Mainpic.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+   
+    z-index: 1;
+    width: 100%;
+    height: 950px;
+}
+.first-screen::after{
+    content: '';
+    width: 100%;
+    height: 950px;
+    position: absolute;
+    top: 0; left: 0;
+    background: rgba(0,0,0,0.5);
+}
+.first-screen__nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 2;
+    width: 100vw;
+}
+.menu-btn{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right:0;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 4;
+  }
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition-duration: .25s;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+   
+  .menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: black;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
+   
+  .menu-item {
+    display: block;
+    padding: 12px 24px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  #menu-toggle{
+    opacity: 0;
+  }
+  #menu-toggle:checked ~ .menubox{
+    visibility: visible;
+    opacity: 0.9;
+    z-index: 3;
+    left: 0;
+  }
+.first-screen__mainlogo{
+    background-image: url("./images/Mainlogo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+ 
+    margin-top: 50px;
+    z-index: 1;
+    width: 400px;
+    height: 340px;
+}
+.first-screen__text{
+    margin-top: 50px;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.963);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.first-screen__text__h1{
+    font-size: 60px;
+    margin-bottom: 0;
+}
+.first-screen__text__p{
+    font-size: 19px;
+    width: 60vw;
+}
+.first-screen__triangle{
+
+    z-index: 1;
+    width: 0;
+    height: 0;
+
+    align-self: center;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 40px solid white;
+    margin-top: 50px;
+}
+.second-screen{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.second-screen__toptext{
+    margin-top: 50px;
+    text-align: center;
+}
+.second-screen__toptext__span{
+    font-size: 20px;
+}
+.second-screen__toptext__h2{
+    font-size: 45px;
+    font-weight: 500;
+    width: 60vw;
+}
+.second-screen__examples{
+    display: grid;
+    grid-template-columns: repeat(3,30vw);
+    grid-template-rows: repeat(2,1fr);
+    grid-auto-rows: auto;
+    margin-bottom: 30px;
+}
+.second-screen__examples__el1{
+    background-image: url("./images/cake.jpg");
+    width: 30vw;
+    height: 40vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.second-screen__examples__el3{
+    background-image: url("./images/bowls.jpeg");
+    width: 30vw;
+    height: 40vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.second-screen__examples__el5{
+    background-image: url("./images/porridge.jpeg");
+    width: 30vw;
+    height: 40vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.second-screen__examples__el2, .second-screen__examples__el4, .second-screen__examples__el6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+.second-screen__examples__el2__span, .second-screen__examples__el4__span, .second-screen__examples__el6__span{
+    margin-bottom: 15px;
+}
+.second-screen__examples__el2__b, .second-screen__examples__el4__b, .second-screen__examples__el6__b{
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.second-screen__examples__el2__p, .second-screen__examples__el4__p, .second-screen__examples__el6__p{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.second-screen__examples__el2__button, .second-screen__examples__el4__button, .second-screen__examples__el6__button{
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    width: 115px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    letter-spacing: 2px;
+}
+.second-screen__events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.second-screen__events__span{
+    font-size: 20px;
+}
+.second-screen__events__h2{
+    font-size: 45px;
+}
+.second-screen__events__cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.second-screen__events__cards1, .second-screen__events__cards2, .second-screen__events__cards3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 30px;
+}
+.second-screen__events__cards1__h3, .second-screen__events__cards2__h3, .second-screen__events__cards3__h3{
+    font-family: sans-serif;
+    font-size: 50px;
+}
+.second-screen__events__cards1__p, .second-screen__events__cards2__p, .second-screen__events__cards3__p{
+    width: 22vw;
+    font-size: 20px;
+}
+.second-screen__events__button{
+    width: 300px;
+    height: 50px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: transparent;
+    margin-bottom: 200px;
+}
+.second-screen__events__button:hover{
+    background-color: black;
+    color: white;
+}
+.third-screen{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.thrid-screen__breadpic__h2{
+    font-size: 45px;
+    font-weight: 500;
+    width: 1000px;
+}
+.thrid-screen__breadpic{
+    background-image: url("./images/bread.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.thrid-screen__breadpic__h2{
+    width: 60vw;
+}
+.thrid-screen__ourmenu{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.thrid-screen__ourmenu__span, .fourth-screen__form__span{
+    font-size: 25px;
+}
+.thrid-screen__ourmenu__h2, .fourth-screen__form__h2{
+    font-size: 50px;
+    text-align: center;
+}
+.thrid-screen__ourmenu__cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    text-align: center;
+    justify-items: center;
+}
+.thrid-screen__ourmenu__cards1__span, .thrid-screen__ourmenu__cards2__span, .thrid-screen__ourmenu__cards3__span, .thrid-screen__ourmenu__cards4__span, .thrid-screen__ourmenu__cards5__span, .thrid-screen__ourmenu__cards6__span, .thrid-screen__ourmenu__cards1__p, .thrid-screen__ourmenu__cards2__p, .thrid-screen__ourmenu__cards3__p, .thrid-screen__ourmenu__cards4__p, .thrid-screen__ourmenu__cards5__p, .thrid-screen__ourmenu__cards6__p{
+    font-size: 20px;
+    width: 40vw;
+}
+.thrid-screen__ourmenu__cards1, .thrid-screen__ourmenu__cards2, .thrid-screen__ourmenu__cards3, .thrid-screen__ourmenu__cards4, .thrid-screen__ourmenu__cards5, .thrid-screen__ourmenu__cards6{
+    margin: 5vw;
+}
+.thrid-screen__manyimages{
+    display: flex;
+    flex-direction: row;
+}
+.thrid-screen__manyimages__smallgroup{
+    display: flex;
+    flex-direction: column;
+}
+.thrid-screen__manyimages__smallgroup__smallestgroup{
+    display: flex;
+    flex-direction: row;
+}
+
+.thrid-screen__manyimages__wine{
+    background-image: url("./images/wine.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 1000px;
+}
+.thrid-screen__manyimages__handcake{
+    background-image: url("./images/handcake.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50vw;
+    height: 500px;
+}
+.thrid-screen__manyimages__pizza{
+    background-image: url("./images/pizza.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 25vw;
+    height: 500px;
+}
+.thrid-screen__manyimages__chococake{
+    background-image: url("./images/cake.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 25vw;
+    height: 500px;
+}
+.fourth-screen{
+    margin-top: 100px;
+}
+.fourth-screen__wecook{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.fourth-screen__wecook__div1, .fourth-screen__wecook__div2, .fourth-screen__wecook__div3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fourth-screen__wecook__div1__chiken{
+    background-image: url("./images/chicken-leg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 7vw;
+    height: 7vw;
+}
+.fourth-screen__wecook__div2__rice{
+    background-image: url("./images/rice.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 7vw;
+    height: 7vw;
+}
+.fourth-screen__wecook__div3__croissant{
+    background-image: url("./images/croissant.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 7vw;
+    height: 7vw;
+}
+.fourth-screen__wecook__div1__h3, .fourth-screen__wecook__div2__h3, .fourth-screen__wecook__div3__h3{
+    font-size: 50px;
+}
+.fourth-screen__wecook__div1__span, .fourth-screen__wecook__div2__span, .fourth-screen__wecook__div3__span{
+    font-size: 25px;
+}
+.fourth-screen__wecook__round{
+    width: 20vw;
+    height: 20vw;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fourth-screen__wecook__round__span{
+    font-size: 17px;
+}
+.fourth-screen__form{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fourth-screen__form__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+.fourth-screen__form__form > input[type=text]{
+    height: 50px;
+    width: 60vw;
+    margin: 10px;
+    font-size: 20px;
+}
+.fourth-screen__form__form > div > input[type=checkbox]{
+    margin: 10px;
+    width: 30px;
+}
+.fourth-screen__form__form > div > label{
+    font-size: 20px;
+}
+.fourth-screen__form__form > button{
+    align-self: center;
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: transparent;
+    margin-bottom: 200px;
+}
+.fourth-screen__form__form > button:hover{
+    background-color: black;
+    color: white;
+}
+footer{
+    background-color: #333333;
+    color: white;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+.footer__p{
+    font-size: 20px;
+    width: 300px;
+}
+
+@media (width < 1000px) {
+    .first-screen__text__h1 {
+        font-size: 60px;
+        margin-bottom: 0;
+        width: 100vw;
+    }
+    .second-screen__examples__el2, .second-screen__examples__el4, .second-screen__examples__el6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+
+    }
+    .second-screen__examples__el1{
+        background-image: url("./images/cake.jpg");
+        width: 30vw;
+        height: 50vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .second-screen__examples__el3{
+        background-image: url("./images/bowls.jpeg");
+        width: 30vw;
+        height: 50vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .second-screen__examples__el5{
+        background-image: url("./images/porridge.jpeg");
+        width: 30vw;
+        height: 50vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .second-screen__examples__el2__span, .second-screen__examples__el4__span, .second-screen__examples__el6__span{
+        margin-bottom: 10px;
+    }
+    .second-screen__examples__el2__b, .second-screen__examples__el4__b, .second-screen__examples__el6__b{
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+    .second-screen__examples__el2__p, .second-screen__examples__el4__p, .second-screen__examples__el6__p{
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .second-screen__examples__el2__button, .second-screen__examples__el4__button, .second-screen__examples__el6__button{
+        margin-top: 15px;
+        font-size: 14px;
+        background-color: transparent;
+        border-bottom: 2px solid black;
+        width: 115px;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        letter-spacing: 2px;
+    }
+}
+@media (width < 770px) {
+    .thrid-screen__ourmenu__cards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+        text-align: center;
+        justify-items: center;
+    }
+    .thrid-screen__ourmenu__cards1, .thrid-screen__ourmenu__cards2, .thrid-screen__ourmenu__cards3, .thrid-screen__ourmenu__cards4, .thrid-screen__ourmenu__cards5, .thrid-screen__ourmenu__cards6{
+        width: 60vw;
+    }
+    .thrid-screen__ourmenu__cards1__p, .thrid-screen__ourmenu__cards2__p, .thrid-screen__ourmenu__cards3__p, .thrid-screen__ourmenu__cards4__p, .thrid-screen__ourmenu__cards5__p, .thrid-screen__ourmenu__cards6__p{
+        width: 60vw;
+    }
+}
+@media (width < 675px) {
+    .second-screen__toptext__h2{
+        font-size: 40px;
+        width: 90vw;
+    }
+    .second-screen__examples{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .second-screen__examples__el2, .second-screen__examples__el4, .second-screen__examples__el6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    .second-screen__examples__el1{
+        width: 100vw;
+        height: 80vw;
+    }
+    .second-screen__examples__el3{
+        width: 100vw;
+        height: 80vw;
+    }
+    .second-screen__examples__el5{
+        width: 100vw;
+        height: 80vw;
+    }
+
+
+    .second-screen__events__cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .second-screen__events__cards1__p, .second-screen__events__cards2__p, .second-screen__events__cards3__p{
+        width: 90vw;
+        font-size: 20px;
+    }
+
+    .thrid-screen__manyimages{
+        display: flex;
+        flex-direction: column;
+    }
+    .thrid-screen__manyimages__smallgroup{
+        display: flex;
+        flex-direction: column;
+    }
+    .thrid-screen__manyimages__smallgroup__smallestgroup{
+        display: flex;
+        flex-direction: column;
+    }
+    .thrid-screen__manyimages__wine{
+        background-image: url("./images/wine.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100vw;
+        height: 1000px;
+    }
+    .thrid-screen__manyimages__handcake{
+        
+        width: 100vw;
+        height: 500px;
+    }
+    .thrid-screen__manyimages__pizza{
+        
+        width: 100vw;
+        height: 500px;
+    }
+    .thrid-screen__manyimages__chococake{
+       
+        width: 100vw;
+        height: 500px;
+    }
+
+    .fourth-screen__wecook{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    .fourth-screen__wecook__div1, .fourth-screen__wecook__div2, .fourth-screen__wecook__div3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+    .fourth-screen__wecook__div1__chiken{
+       
+        width: 20vw;
+        height: 20vw;
+    }
+    .fourth-screen__wecook__div2__rice{
+       
+        width: 20vw;
+        height: 20vw;
+    }
+    .fourth-screen__wecook__div3__croissant{
+       
+        width: 20vw;
+        height: 20vw;
+    }
+    .fourth-screen__wecook__round{
+        width: 50vw;
+        height: 50vw;
+    }
+    .fourth-screen__wecook__round__span{
+        font-size: 15px;
+    }
+    
+}
